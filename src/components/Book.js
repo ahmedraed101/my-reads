@@ -22,7 +22,7 @@ const Book = ({ book, updateBook }) => {
                         onChange={(e) => update(e.target.value)}
                         value={book.shelf ? book.shelf : 'none'}
                     >
-                        <option value='none' disabled>
+                        <option value='' disabled>
                             Move to ...
                         </option>
                         <option value='currentlyReading'>

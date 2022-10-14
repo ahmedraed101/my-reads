@@ -21,7 +21,6 @@ const Search = ({ updateBook, currentBooks }) => {
 
         const booksToRender = res.map((b) => {
             const currentBook = currentBooks.find((cb) => cb.id === b.id)
-            console.log(currentBook)
             if (currentBook) return currentBook
             return b
         })
@@ -46,7 +45,7 @@ const Search = ({ updateBook, currentBooks }) => {
                 <ol className='books-grid'>
                     {books.length !== 0 &&
                         books.map((b) => (
-                            <li key={b.title}>
+                            <li key={b.id}>
                                 <Book book={b} updateBook={updateBook}></Book>
                             </li>
                         ))}
